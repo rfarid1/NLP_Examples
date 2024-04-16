@@ -1,0 +1,13 @@
+# compare the similarity of two words 
+from nltk . corpus import wordnet 
+w1 = wordnet.synset('car.n.01')
+w2 = wordnet.synset('bus.n.01')
+print(w1.wup_similarity(w2))
+
+w1 = wordnet.synset('car.n.01')
+w2 = wordnet.synset('cat.n.01')
+print(w1.wup_similarity(w2))
+
+w1 = wordnet.synset('bus.n.01')
+w2 = wordnet.synset('automobile.n.01')
+print(w1.wup_similarity(w2))

@@ -1,0 +1,15 @@
+import re
+import nltk
+from nltk import word_tokenize, sent_tokenize
+from nltk.corpus import gutenberg
+f1= gutenberg.raw("bible-kjv.txt")
+l1 = str(f1.split('\n')[7:30])
+wcount = {}   
+w_f1 = word_tokenize(l1)
+for w in w_f1:
+    if w in wcount:
+        wcount[w] +=1
+    else:
+        wcount[w] =1
+sort_count= sorted([(v,k) for v,k in wcount.items() ])
+print(sort_count)

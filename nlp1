@@ -11,5 +11,5 @@ for w in w_f1:
         wcount[w] +=1
     else:
         wcount[w] =1
-sort_count= sorted([(v,k) for v,k in wcount.items() ])
+sort_count= sorted([(k,v) for k,v in wcount.items() ])[:30]
 print(sort_count)
